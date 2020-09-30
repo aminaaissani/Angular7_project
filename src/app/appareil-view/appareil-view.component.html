@@ -1,12 +1,13 @@
 <div class="col-xs-12">
   <h2>Mes appareils</h2>
-  <p> Mis à jour :{{ lastUpdate | async | date:'short'}}</p>
+  <p> Mis à jour :{{ lastUpdate | date:'short'}}</p>
   <ul class="list-group">
     <!-->Directives structurelles ngIf ngFor<-->
     <app-appareil *ngFor="let appareil of appareils; let i = index"
                   [appareilName]="appareil.name"
                   [appareilStatus]="appareil.status"
-                  [index]="i"></app-appareil>
+                  [index]="i"
+                  [id]="appareil.id"></app-appareil>
   </ul>
   <!-->[] property binding used to modify DOM elements by typeScript
   () to create event binding, communicate action with typeScript function</-->

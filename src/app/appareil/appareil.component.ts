@@ -10,6 +10,7 @@ export class AppareilComponent implements OnInit {
 @Input() appareilName;
 @Input() appareilStatus:string ='éteint';
 @Input() index:number;
+@Input() id:number;
 
   constructor(private appareilService:AppareilService) { }
 
